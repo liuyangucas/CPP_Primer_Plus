@@ -1,1 +1,3 @@
-习题1
+golf.h为头文件，存储函数原型和结构体原型
+golf.cpp为函数的定义
+chapter_9.cpp为main()函数，演示主要功能
