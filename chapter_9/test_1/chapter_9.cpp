@@ -5,19 +5,19 @@ int main() {
 	golf ann;
 	int hc;
 	setgolf(ann, "Ann BirdFree", 24);
-	cout << "Õ¹Ê¾AnnµÄÐÅÏ¢£º\n";
+	cout << "å±•ç¤ºAnnçš„ä¿¡æ¯ï¼š\n";
 	showgolf(ann);
-	cout << "ÖØÐÂÉèÖÃAnnµÄHandicapÊýÖµ£º";
+	cout << "é‡æ–°è®¾ç½®Annçš„Handicapæ•°å€¼ï¼š";
 	cin >> hc;
 	cin.ignore();
 	handicap(ann, hc);
-	cout << "ÖØÖÃºóAnnµÄÐÅÏ¢Îª£º\n";
+	cout << "é‡ç½®åŽAnnçš„ä¿¡æ¯ä¸ºï¼š\n";
 	showgolf(ann);
-	const int num = 3;//ÉèÖÃ½á¹¹ÌåÊý×é³¤¶È
+	const int num = 3;//è®¾ç½®ç»“æž„ä½“æ•°ç»„é•¿åº¦
 	golf* anndy = new golf[num];
 	int i = 0;
 	for (; i < num; i++) {
-		cout << "ÊäÈëµÚ" << i + 1 << "¸öÐÅÏ¢£º\n";
+		cout << "è¾“å…¥ç¬¬" << i + 1 << "ä¸ªä¿¡æ¯ï¼š\n";
 		int temp=setgolf(anndy[i]);
 		if (temp == 0)
 			break;
@@ -25,5 +25,6 @@ int main() {
 	for (auto j = 0; j < i; j++) {
 		showgolf(anndy[j]);
 	}
+	delete[] anndy;
 	return 0;
 }
